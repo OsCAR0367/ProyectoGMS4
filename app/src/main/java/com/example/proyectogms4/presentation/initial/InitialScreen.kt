@@ -1,5 +1,7 @@
 package com.example.proyectogms4.presentation.initial
 
+import com.google.firebase.crashlytics.FirebaseCrashlytics
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -35,6 +37,7 @@ import com.example.proyectogms4.ui.theme.Black
 import com.example.proyectogms4.ui.theme.Gray
 import com.example.proyectogms4.ui.theme.Green
 import com.example.proyectogms4.ui.theme.ShapeButton
+
 @Preview(showBackground = true)
 @Composable
 fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit = {}) {
@@ -62,7 +65,7 @@ fun InitialScreen(navigateToLogin: () -> Unit = {}, navigateToSignUp: () -> Unit
         )
         Spacer(modifier = Modifier.weight(1f))
         Button(
-            onClick = { navigateToSignUp() },
+            onClick = { FirebaseCrashlytics.getInstance().log("Test Crash") },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp)

@@ -32,6 +32,7 @@ import com.example.proyectogms4.ui.theme.Black
 import com.example.proyectogms4.ui.theme.SelectedField
 import com.example.proyectogms4.ui.theme.UnselectedField
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 @Composable
 fun LoginScreen(auth: FirebaseAuth, navigateToHome: () -> Unit) {

@@ -52,11 +52,20 @@ android {
 }
 
 dependencies {
+
+
+    androidTestImplementation(libs.mockito.core)
+    androidTestImplementation(libs.mockito.inline)
+    androidTestImplementation(libs.kotlinx.coroutines.test)
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.crashlytics)
     implementation(libs.androidx.navigation.compose)
-    implementation(platform(libs.firebase.bom))
-    implementation(platform(libs.firebase.crashlytics)  )
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
